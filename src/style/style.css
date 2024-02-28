@@ -67,7 +67,7 @@
   --secondary-ff: "DM Serif Display", sans-serif;
   --color-primary: #ba4270;
   --color-secondary: #1b262f;
-  --color-text: #6c8294;
+  --color-text: #617585;
   --color-heading: #36536b;
   --color-neutral: #ffffff;
 
@@ -79,6 +79,7 @@
   --2xl-fs: 1.728rem;
   --3xl-fs: 2.074rem;
   --4xl-fs: 2.488rem;
+  --5xl-fs: 2.986rem;
 }
 
 *,
@@ -93,4 +94,112 @@ body {
   --background: #fbfcfe;
   background-color: var(--background);
   font-family: var(--primary-ff);
+}
+
+.wrapper {
+  --width: 71.25rem;
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 var(--default-fs);
+}
+
+.navigation {
+  padding: var(--4xl-fs) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--5xl-fs);
+}
+
+.navigation__actions {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navigation__list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: var(--3xl-fs);
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link--navigation:link,
+.link--navigation:visited {
+  padding: 5px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: 0.3s;
+}
+
+.link--navigation:hover {
+  --color-text: #566876;
+}
+
+.link--cta:link,
+.link--cta:visited {
+  margin-left: auto;
+  padding: var(--default-fs) var(--2xl-fs);
+  background-color: var(--color-primary);
+  color: var(--color-neutral);
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.link--cta:hover {
+  --color-primary: #a73b65;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.btn--hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 71.25rem) {
+  .navigation__list {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 45rem) {
+  .navigation {
+    flex-wrap: wrap;
+    gap: var(--3xl-fs);
+  }
+
+  .btn--hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .navigation__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+    width: 100%;
+  }
+
+  .navigation__list {
+    margin-left: 0;
+    flex-direction: column;
+    margin-bottom: var(--3xl-fs);
+  }
+
+  .link--cta:link,
+  .link--cta:visited {
+    margin-left: 0;
+  }
 }
