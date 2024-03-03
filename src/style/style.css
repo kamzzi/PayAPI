@@ -206,7 +206,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
-  padding: var(--p-96) 0;
+  padding: var(--7xl-fs) 0;
 }
 
 .hero__image-container {
@@ -232,9 +232,17 @@ body {
   max-width: 450px;
 }
 
+.newsletter.error .newsletter__input {
+  border: 1px solid var(--color-error);
+}
+
+.newsletter.error .form-error {
+  opacity: 1;
+}
+
 .newsletter__input {
   width: 100%;
-  border: none;
+  border: 1px solid var(--color-neutral);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   border-radius: 100px;
   font-family: inherit;
@@ -242,11 +250,14 @@ body {
   font-size: var(--default-fs);
 }
 
-.error {
+.form-error {
+  opacity: 0;
+
   margin-top: 0.75rem;
   padding-left: 1.25rem;
   color: var(--color-error);
   font-weight: 500;
+  transition: 0.3s;
 }
 
 .btn {
@@ -258,7 +269,7 @@ body {
 
 .btn--submit {
   position: absolute;
-  top: 4px;
+  top: 5px;
   right: 4px;
 
   padding: var(--default-fs) var(--2xl-fs);
@@ -268,6 +279,14 @@ body {
   font-weight: 500;
   font-size: var(--default-fs);
   transition: 0.3s;
+}
+
+.btn--submit.success {
+  --color-primary: #2a9d8f;
+}
+
+.btn--submit.success:hover {
+  --color-primary: #268d81;
 }
 
 .btn--submit:hover {
