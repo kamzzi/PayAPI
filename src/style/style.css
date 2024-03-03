@@ -182,6 +182,12 @@ body {
   .btn--hamburger {
     display: flex;
     margin-left: auto;
+    background-image: url("./../assets/images/shared/mobile/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: var(--2xl-fs);
+    height: var(--xl-fs);
   }
 
   .navigation__actions {
@@ -190,12 +196,42 @@ body {
     align-items: center;
     order: 1;
     width: 100%;
+    background-color: var(--color-secondary);
+    border-radius: 9px;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transform: translateY(-5rem);
+
+    transition: 0.3s;
+  }
+
+  .navigation.active .navigation__actions {
+    opacity: 1;
+    visibility: visible;
+    max-height: 300px;
+    transform: translateY(0);
+
+    padding: var(--3xl-fs) 0;
+  }
+
+  .navigation.active .btn--hamburger {
+    background-image: url("./../assets/images/shared/mobile/close.svg");
   }
 
   .navigation__list {
     margin-left: 0;
     flex-direction: column;
     margin-bottom: var(--3xl-fs);
+  }
+
+  .navigation.active .link--navigation:link,
+  .navigation.active .link--navigation:visited {
+    color: var(--color-neutral);
+  }
+
+  .navigation.active .link--navigation:hover {
+    --color-neutral: #e6e6e6;
   }
 
   .link--cta:link,
