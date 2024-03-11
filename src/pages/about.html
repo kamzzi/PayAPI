@@ -6,6 +6,46 @@
     <title>Document</title>
   </head>
   <body>
-    About
+    <div id="app">
+      <div class="wrapper">
+        <nav class="navigation">
+          <a href="./../../index.html" class="logo">
+            <img
+              src="./../assets/images/shared/desktop/logo.svg"
+              alt="PayAPI"
+              class="logo__image"
+            />
+          </a>
+          <div class="navigation__actions" id="menu">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./pricing.html" class="link link--navigation"
+                  >Pricing</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./about.html" class="link link--navigation">About</a>
+              </li>
+              <li class="navigation__item">
+                <a href="./contact.html" class="link link--navigation"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <a href="./contact.html" class="link link--cta">Schedule a Demo</a>
+          </div>
+          <button
+            class="btn btn--hamburger"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="menu"
+            data-hamburger
+          >
+            &nbsp;
+          </button>
+        </nav>
+      </div>
+    </div>
+    <script type="module" src="./../main.ts"></script>
   </body>
 </html>
