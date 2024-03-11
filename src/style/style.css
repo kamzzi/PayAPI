@@ -114,6 +114,7 @@ body {
 
 .header {
   position: relative;
+  overflow-x: hidden;
 }
 
 .header__decoration {
@@ -121,10 +122,6 @@ body {
   top: -19rem;
   right: -9rem;
   z-index: -1;
-}
-
-.header__dec-image {
-  width: 900px;
 }
 
 .navigation {
