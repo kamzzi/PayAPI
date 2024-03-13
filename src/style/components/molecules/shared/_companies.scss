@@ -1,0 +1,28 @@
+@use "./../../../abstracts/mixins" as *;
+
+.companies {
+  padding: 3rem 0;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+
+  @include media(71.25rem) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+
+  @include media(60rem) {
+    order: -1;
+    padding-bottom: 3rem;
+    row-gap: 3rem;
+  }
+
+  @include media(27rem) {
+    grid-template-columns: 1fr;
+  }
+
+  &__logo {
+    filter: brightness(1000%);
+  }
+}

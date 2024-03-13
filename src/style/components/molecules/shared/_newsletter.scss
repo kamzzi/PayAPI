@@ -1,0 +1,53 @@
+@use "./../../../abstracts/variables" as *;
+@use "./../../../abstracts/mixins" as *;
+
+.newsletter {
+  position: relative;
+  max-width: 28.125rem;
+
+  @include media(60rem) {
+    margin: 0 auto;
+  }
+
+  &__item {
+    @include media(27rem) {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid var(--color-neutral);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 100px;
+    font-family: inherit;
+    padding: 1.25rem 12.5rem 1.25rem 1.25rem;
+    font-size: var(--default-fs);
+
+    @include media(27rem) {
+      padding-right: 1.25rem;
+    }
+  }
+
+  &.error {
+    &__input {
+      border: 1px solid var(--color-error);
+    }
+    .form-error {
+      opacity: 1;
+      max-height: 20px;
+    }
+  }
+
+  .form-error {
+    opacity: 0;
+
+    margin-top: 0.75rem;
+    padding-left: 1.25rem;
+    color: var(--color-error);
+    font-weight: 500;
+    max-height: 0;
+    text-align: left;
+    transition: 0.3s;
+  }
+}

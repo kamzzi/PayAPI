@@ -1,0 +1,22 @@
+@use "./../../../abstracts/mixins" as *;
+
+.header {
+  position: relative;
+  overflow-x: hidden;
+  &__decoration {
+    position: absolute;
+    top: -19rem;
+    right: -9rem;
+    z-index: -1;
+
+    @include media(87rem) {
+      right: -23rem;
+    }
+
+    @include media(71.25rem) {
+      top: 0;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+}

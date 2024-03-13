@@ -1,0 +1,56 @@
+@use "./../../abstracts/mixins" as *;
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  &--hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    @include media(45rem) {
+      display: flex;
+      margin-left: auto;
+      background-image: url("./../assets/images/shared/mobile/menu.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: var(--2xl-fs);
+      height: var(--xl-fs);
+    }
+
+    .navigation.active & {
+      background-image: url("./../assets/images/shared/mobile/close.svg");
+    }
+  }
+
+  &--submit {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+
+    padding: var(--default-fs) var(--2xl-fs);
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: var(--default-fs);
+    transition: 0.3s;
+    &:hover {
+      --color-primary: #a73b65;
+    }
+    &.success {
+      --color-primary: #2a9d8f;
+      &:hover {
+        --color-primary: #268d81;
+      }
+    }
+
+    @include media(27rem) {
+      position: static;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use "./../abstracts/variables" as *;
+
+.section-intro {
+  position: relative;
+  overflow: hidden;
+  padding: var(--p-128) 0;
+  background-color: var(--color-secondary);
+  z-index: 0;
+}
+
+.section-z-pattern {
+  position: relative;
+  padding: var(--p-96) 0 3rem 0;
+}
+
+.section-features {
+  padding: 3rem 0 6rem 0;
+}

@@ -1,0 +1,22 @@
+@use "./../../abstracts/variables" as *;
+@use "./../../abstracts/mixins" as *;
+
+.wrapper {
+  --width: 71.25rem;
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 var(--default-fs);
+
+  @include media(60rem) {
+    &--hero,
+    &--intro {
+      --width: 45rem;
+    }
+  }
+
+  @include media(45rem) {
+    &--features {
+      --width: 25rem;
+    }
+  }
+}

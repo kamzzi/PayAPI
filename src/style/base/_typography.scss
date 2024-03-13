@@ -1,0 +1,36 @@
+@use "./../abstracts/variables" as *;
+@use "./../abstracts/mixins" as *;
+
+.heading__primary {
+  font-size: var(--7xl-fs);
+  color: var(--color-heading);
+  font-family: var(--secondary-ff);
+  line-height: 1.15;
+  margin-bottom: 2.25rem;
+
+  @include media(71.25rem) {
+    font-size: var(--6xl-fs);
+  }
+
+  @include media(45rem) {
+    font-size: var(--5xl-fs);
+  }
+}
+
+.heading__secondary {
+  color: var(--color-neutral);
+  font-size: var(--5xl-fs);
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  font-family: var(--secondary-ff);
+
+  @include media(71.25rem) {
+    font-size: var(--4xl-fs);
+  }
+}
+
+.paragraph {
+  line-height: 1.7;
+  color: var(--color-second-text);
+  margin-bottom: 2.25rem;
+}

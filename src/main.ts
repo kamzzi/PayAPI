@@ -1,3 +1,3 @@
-import "./style/style.css";
+import "./style/style.scss";
 import "./app/menu";
 import "./app/newsletter";

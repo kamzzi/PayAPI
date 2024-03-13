@@ -1,0 +1,31 @@
+@use "./../../../abstracts/mixins" as *;
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2.25rem;
+
+  @include media(60rem) {
+    grid-template-columns: 1fr;
+  }
+
+  &__decoration {
+    position: absolute;
+    top: -20rem;
+    left: -15rem;
+    z-index: -1;
+
+    @include media(71.25rem) {
+      position: absolute;
+      top: -15rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__content {
+    @include media(60rem) {
+      text-align: center;
+    }
+  }
+}
