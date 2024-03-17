@@ -1,17 +1,16 @@
-import { defineConfig } from "vite";
+// vite.config.js
 import { resolve } from "path";
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  server: {
-    port: 3000,
-    fs: {
-      strict: false, // Wymagane dla dostępu do plików HTML poza folderem src
-    },
-    proxy: {}, // Możesz dodać konfigurację proxy, jeśli jest potrzebna
-  },
-  resolve: {
-    alias: {
-      "/@": resolve(__dirname, "src"), // Alias dla folderu src
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "./src/pages/about.html"),
+        contact: resolve(__dirname, "./src/pages/contact.html"),
+        pricing: resolve(__dirname, "./src/pages/pricing.html"),
+      },
     },
   },
 });
