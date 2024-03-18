@@ -1,20 +1,20 @@
 import { VALID_EMAIL } from "./utils";
 
-const newsletter = document.querySelector(".newsletter");
-const emailInput =
-  document.querySelector<HTMLInputElement>(".newsletter__input");
-const error = document.querySelector(".form-error");
+const newsletter = document.querySelectorAll<HTMLDivElement>(".newsletter");
 
-const submitButton = document.querySelector(".btn--submit");
+const showError = (newsletter: HTMLDivElement, message: string) => {
+  const error = newsletter.querySelector(".form-error");
 
-const showError = (message: string) => {
   if (!error) return;
 
   newsletter?.classList.add("error");
   error.textContent = message;
 };
 
-const showSuccess = () => {
+const showSuccess = (newsletter: HTMLDivElement) => {
+  const error = newsletter.querySelector(".form-error");
+  const submitButton = newsletter.querySelector(".btn--submit");
+
   if (!error) return;
 
   newsletter?.classList.remove("error");
@@ -26,11 +26,15 @@ const showSuccess = () => {
   submitButton.textContent = "Succesful!";
 
   setTimeout(() => {
-    setInitialState();
+    setInitialState(newsletter);
   }, 1000);
 };
 
-const setInitialState = () => {
+const setInitialState = (newsletter: HTMLDivElement) => {
+  const submitButton = newsletter.querySelector(".btn--submit");
+  const emailInput =
+    newsletter.querySelector<HTMLInputElement>(".newsletter__input");
+
   if (!submitButton) return;
 
   submitButton?.classList.remove("success");
@@ -45,30 +49,29 @@ const isValidEmail = (email: string) => {
   return String(email).toLowerCase().match(VALID_EMAIL);
 };
 
-const isValidInput = (value?: string) => {
+const isValidInput = (newsletter: HTMLDivElement, value?: string) => {
   if (!value) {
-    showError("Input is empty!");
+    showError(newsletter, "Input is empty!");
     return false;
   }
 
   if (!isValidEmail(value)) {
-    showError("Input is invalid!");
+    showError(newsletter, "Input is invalid!");
     return false;
   }
 
   return true;
 };
 
-newsletter?.addEventListener("submit", (ev) => {
-  ev.preventDefault();
+newsletter.forEach((newsletter) =>
+  newsletter?.addEventListener("submit", (ev) => {
+    ev.preventDefault();
 
-  if (!isValidInput(emailInput?.value)) return;
+    const emailInput =
+      newsletter.querySelector<HTMLInputElement>(".newsletter__input");
 
-  showSuccess();
-});
+    if (!isValidInput(newsletter, emailInput?.value)) return;
 
-/* 
-    Pobieram wartość z inputa
-    Sprawdza, jeżeli jest nie poprawny to wyswietl komunikat
-    Jezeli ok to wyswietl komunikat i zniknij po chwili.
-*/
+    showSuccess(newsletter);
+  })
+);
