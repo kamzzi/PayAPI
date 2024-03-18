@@ -4,6 +4,7 @@
 .newsletter {
   position: relative;
   max-width: 28.125rem;
+  width: 100%;
 
   @include media(60rem) {
     margin: 0 auto;
