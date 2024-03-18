@@ -1,0 +1,25 @@
+@use "./../../../abstracts/variables" as *;
+@use "./../../../abstracts/mixins" as *;
+
+.section-cta {
+  padding: 3rem 0;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .heading__secondary {
+    color: var(--color-secondary);
+    margin-bottom: 0;
+
+    @include media(60rem) {
+      margin-bottom: 1.75rem;
+    }
+  }
+
+  @include media(60rem) {
+    flex-direction: column;
+  }
+}

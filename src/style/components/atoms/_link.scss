@@ -67,4 +67,15 @@
       background-color: var(--color-neutral);
     }
   }
+
+  &--footer {
+    &:link,
+    &:visited {
+      color: var(--color-neutral);
+    }
+
+    &:hover {
+      --color-neutral: #e6e6e6;
+    }
+  }
 }

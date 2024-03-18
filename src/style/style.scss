@@ -5,6 +5,7 @@
 @use "./pages/home";
 
 @use "./layout/navigation" as *;
+@use "./layout/footer" as *;
 
 @use "./components/atoms/wrapper" as *;
 @use "./components/atoms/link" as *;
@@ -17,3 +18,5 @@
 
 @use "./components/molecules/shared/newsletter" as *;
 @use "./components/molecules/shared/companies" as *;
+@use "./components/molecules/shared/cta" as *;
+@use "./components/molecules/shared/socials" as *;

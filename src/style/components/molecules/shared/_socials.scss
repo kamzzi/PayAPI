@@ -1,0 +1,8 @@
+@use "./../../../abstracts/variables" as *;
+
+.socials {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: var(--xl-fs);
+}

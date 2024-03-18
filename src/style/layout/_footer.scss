@@ -1,0 +1,55 @@
+@use "./../abstracts/variables" as *;
+@use "./../abstracts/mixins" as *;
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+  background-color: var(--color-secondary);
+
+  .logo__image {
+    filter: brightness(1000%);
+  }
+
+  &__nav {
+    @include media(71.25rem) {
+      margin-left: auto;
+    }
+
+    @include media(45rem) {
+      margin-left: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: var(--5xl-fs);
+
+    @include media(45rem) {
+      flex-direction: column;
+      gap: var(--3xl-fs);
+    }
+  }
+
+  &__socials {
+    margin-left: auto;
+
+    @include media(45rem) {
+      margin-left: 0;
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    top: -2rem;
+    right: -10rem;
+    max-width: 450px;
+    @include media(45rem) {
+      top: 17rem;
+      right: 0;
+      max-width: 700px;
+      width: 100%;
+    }
+  }
+}
