@@ -15,6 +15,14 @@
   @include media(45rem) {
     font-size: var(--5xl-fs);
   }
+  &--about {
+    @include media(45rem) {
+      font-size: var(--3xl-fs);
+    }
+    @include media(27rem) {
+      font-size: var(--2xl-fs);
+    }
+  }
 }
 
 .heading__secondary {

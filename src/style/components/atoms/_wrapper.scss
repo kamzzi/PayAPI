@@ -25,4 +25,10 @@
       --width: 25rem;
     }
   }
+
+  @include media(35rem) {
+    &--informations {
+      --width: 25rem;
+    }
+  }
 }
