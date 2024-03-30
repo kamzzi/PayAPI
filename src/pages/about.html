@@ -3,42 +3,239 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="./../assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>PayAPI - all about PayAPI</title>
+    <meta
+      name="description"
+      content="Start building with our APIs for absolutely free. Easy to implement, simple UI&UX"
+    />
   </head>
   <body>
-    <div class="wrapper">
-      <nav class="navigation">
-        <a href="./../../index.html" class="logo">
+    <div id="app">
+      <div class="wrapper">
+        <nav class="navigation">
+          <a href="./../../index.html" class="logo">
+            <img
+              src="./../assets/images/shared/desktop/logo.svg"
+              alt="PayAPI"
+              class="logo__image"
+            />
+          </a>
+          <div class="navigation__actions" id="menu">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./pricing.html" class="link link--navigation"
+                  >Pricing</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./about.html" class="link link--navigation">About</a>
+              </li>
+              <li class="navigation__item">
+                <a href="./contact.html" class="link link--navigation"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <a href="./contact.html" class="link link--general link--cta"
+              >Schedule a Demo</a
+            >
+          </div>
+          <button
+            class="btn btn--hamburger"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="menu"
+            data-hamburger
+          >
+            &nbsp;
+          </button>
+        </nav>
+      </div>
+      <main>
+        <section class="section-about">
+          <div class="wrapper">
+            <h1 class="heading__primary">
+              We empower innovators by delivering access to the financial system
+            </h1>
+            <div class="goals">
+              <div class="goals__item">
+                <h2 class="goals__title">Our Vision</h2>
+                <p class="goals__description">
+                  Our main goal is to build beautiful consumer experiences along
+                  with developer-friendly infrastructure. The result is an
+                  intelligent tool that gives everyone the ability to create
+                  amazing products that solve big problems. We are deeply
+                  focused on democratizing financial services through
+                  technology.
+                </p>
+              </div>
+              <div class="goals__item">
+                <h2 class="goals__title">Our Business</h2>
+                <p class="goals__description">
+                  At the core of our platform is the technical infrastructure
+                  APIs that connect consumers. Our innovative product provides
+                  key insights for businesses and individuals, as well as robust
+                  reporting for traditional financial institutions and
+                  developers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="about-image">
+          <picture class="about-image__container">
+            <source
+              srcset="./../assets/images/about/mobile/image-team-members.jpg"
+              media="(max-width:560px)"
+            />
+            <source
+              srcset="./../assets/images/about/tablet/image-team-members.jpg"
+              media="(max-width:768px)"
+            />
+            <img
+              src="./../assets/images/about/desktop/image-team-members.jpg"
+              alt="PayAPI team members"
+              class="about-image__image"
+            />
+          </picture>
           <img
-            src="./../assets/images/shared/desktop/logo.svg"
-            alt="PayAPI"
-            class="logo__image"
+            src="./../assets/images/shared/desktop/bg-pattern-circle.svg"
+            alt=""
+            class="about-image__decoration"
           />
-        </a>
-        <div class="navigation__actions" id="menu">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="./pricing.html" class="link link--navigation">Pricing</a>
-            </li>
-            <li class="navigation__item">
-              <a href="./about.html" class="link link--navigation">About</a>
-            </li>
-            <li class="navigation__item">
-              <a href="./contact.html" class="link link--navigation">Contact</a>
-            </li>
-          </ul>
-          <a href="./contact.html" class="link link--cta">Schedule a Demo</a>
         </div>
-        <button
-          class="btn btn--hamburger"
-          aria-label="Open navigation"
-          aria-expanded="false"
-          aria-controls="menu"
-          data-hamburger
-        >
-          &nbsp;
-        </button>
-      </nav>
+        <section class="section-informations">
+          <div class="wrapper">
+            <div class="informations">
+              <div class="information">
+                <h2 class="information__title">Team Members</h2>
+                <p class="information__value">300+</p>
+              </div>
+              <div class="information">
+                <h2 class="information__title">Offices in the US</h2>
+                <p class="information__value">3</p>
+              </div>
+              <div class="information">
+                <h2 class="information__title">Transactions analyzed</h2>
+                <p class="information__value">10M+</p>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="goals">
+              <div class="goals__item">
+                <h2 class="goals__title">The Culture</h2>
+                <p class="goals__description">
+                  We strongly believe there's always an opportunity to learn
+                  from each other outside of day-to-day work, whether it's
+                  company-wide offsites, internal hackathons, or co-worker
+                  meetups. We always value cross-team collaboration and
+                  diversity of thought, no matter the job title.
+                </p>
+              </div>
+              <div class="goals__item">
+                <h2 class="goals__title">The People</h2>
+                <p class="goals__description">
+                  We're all passionate about building a more efficient and
+                  inclusive financial infrastructure together. At PayAPI, we
+                  have diverse backgrounds and skills.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-cta">
+          <div class="wrapper">
+            <div class="cta">
+              <h2 class="heading__secondary">Ready to start?</h2>
+              <form class="newsletter">
+                <div class="newsletter__item">
+                  <input
+                    type="text"
+                    placeholder="Email address"
+                    class="newsletter__input"
+                  />
+                  <p class="form-error">&nbsp;</p>
+                </div>
+                <button class="btn btn--submit">Schedule a demo</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="wrapper">
+          <div class="footer__content">
+            <a href="./../../index.html" class="logo">
+              <img
+                src="./../assets/images/shared/desktop/logo.svg"
+                alt="PayAPI"
+                class="logo__image"
+              />
+            </a>
+            <nav class="footer__nav">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="./pricing.html" class="link link--footer">Pricing</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="./about.html" class="link link--footer">About</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="./contact.html" class="link link--footer">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer__socials">
+              <ul class="socials">
+                <li class="socials__item">
+                  <a href="#" class="link socials__link" title="Facebook">
+                    <img
+                      src="./../assets/images/shared/desktop/facebook.svg"
+                      alt="Facebook"
+                      class="socials__icon"
+                    />
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="#" class="link socials__link" title="Twitter">
+                    <img
+                      src="./../assets/images/shared/desktop/twitter.svg"
+                      alt="Twitter"
+                      class="socials__icon"
+                    />
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="#" class="link socials__link" title="LinkedIn">
+                    <img
+                      src="./../assets/images/shared/desktop/linkedin.svg"
+                      alt="LinkedIn"
+                      class="socials__icon"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./../assets/images/shared/desktop/bg-pattern-circle.svg"
+          alt=""
+          class="footer__decoration"
+        />
+      </footer>
+      <img
+        src="./../assets/images/shared/desktop/bg-pattern-circle.svg"
+        alt=""
+        class="global__decoration"
+      />
     </div>
+    <script type="module" src="/../src/main.ts"></script>
   </body>
 </html>
