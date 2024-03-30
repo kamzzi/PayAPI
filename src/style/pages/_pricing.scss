@@ -1,0 +1,26 @@
+@use "./../abstracts/variables" as *;
+@use "./../abstracts/mixins" as *;
+
+.section-pricing {
+  padding-top: var(--p-96);
+
+  @include media(52.5rem) {
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+
+.global__decoration {
+  position: absolute;
+  top: -34rem;
+  right: -3rem;
+  z-index: -1;
+
+  @include media(71.25rem) {
+    right: -27rem;
+  }
+
+  @include media(45rem) {
+    right: -35rem;
+  }
+}

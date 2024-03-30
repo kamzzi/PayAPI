@@ -3,6 +3,7 @@
 @use "./abstracts/variables" as *;
 
 @use "./pages/home";
+@use "./pages/pricing";
 
 @use "./layout/navigation" as *;
 @use "./layout/footer" as *;
@@ -15,6 +16,7 @@
 @use "./components/molecules/home/intro" as *;
 @use "./components/molecules/home/z-pattern" as *;
 @use "./components/molecules/home/features" as *;
+@use "./components/molecules/pricing/plans" as *;
 
 @use "./components/molecules/shared/newsletter" as *;
 @use "./components/molecules/shared/companies" as *;

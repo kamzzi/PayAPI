@@ -14,6 +14,12 @@
     }
   }
 
+  @include media(52.5rem) {
+    &--pricing {
+      --width: 30rem;
+    }
+  }
+
   @include media(45rem) {
     &--features {
       --width: 25rem;
