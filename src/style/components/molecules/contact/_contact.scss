@@ -1,0 +1,23 @@
+@use "./../../../abstracts/variables" as *;
+@use "./../../../abstracts/mixins" as *;
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @include media(45rem) {
+    grid-template-columns: 1fr;
+  }
+
+  &__companies {
+    place-self: center;
+  }
+  &__subtitle {
+    font-size: var(--xl-fs);
+    color: var(--color-secondary);
+    font-family: var(--secondary-ff);
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+}

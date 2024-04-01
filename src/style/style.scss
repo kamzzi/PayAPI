@@ -5,6 +5,7 @@
 @use "./pages/home";
 @use "./pages/pricing";
 @use "./pages/about";
+@use "./pages/contact";
 
 @use "./layout/navigation" as *;
 @use "./layout/footer" as *;
@@ -20,6 +21,8 @@
 @use "./components/molecules/pricing/plans" as *;
 @use "./components/molecules/about/goals" as *;
 @use "./components/molecules/about/informations" as *;
+@use "./components/molecules/contact/contact" as *;
+@use "./components/molecules/contact/form" as *;
 
 @use "./components/molecules/shared/newsletter" as *;
 @use "./components/molecules/shared/companies" as *;

@@ -1,0 +1,73 @@
+@use "./../../../abstracts/variables" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__item--error {
+    .form__input {
+      border-color: var(--color-error);
+    }
+
+    .form__error {
+      opacity: 1;
+      max-height: 20px;
+    }
+  }
+
+  &__action {
+    position: relative;
+  }
+
+  &__checkbox-label {
+    margin-left: 0.5rem;
+    color: var(--color-secondary);
+  }
+
+  &__input {
+    width: 100%;
+
+    padding: 1.25rem;
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-text);
+    color: var(--color-secondary);
+    font-family: inherit;
+    font-size: var(--default-fs);
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-text);
+    }
+  }
+
+  &__input:focus + &__label,
+  &__input:valid + &__label {
+    top: 0;
+    background-color: var(--background);
+    font-weight: 600;
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-left: 1.21rem;
+    color: var(--color-text);
+    transition: 0.3s;
+  }
+
+  &__error {
+    opacity: 0;
+
+    margin-top: 0.75rem;
+    padding-left: 1.25rem;
+    color: var(--color-error);
+    font-weight: 500;
+    max-height: 0;
+    text-align: left;
+    transition: 0.3s;
+  }
+}

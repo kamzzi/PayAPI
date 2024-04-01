@@ -24,6 +24,9 @@
     &--features {
       --width: 25rem;
     }
+    &--contact {
+      --width: 35rem;
+    }
   }
 
   @include media(35rem) {

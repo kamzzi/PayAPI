@@ -22,6 +22,13 @@
     grid-template-columns: 1fr;
   }
 
+  &--contact {
+    row-gap: 2rem;
+  }
+  &--contact &__logo {
+    filter: none;
+  }
+
   &__logo {
     filter: brightness(1000%);
   }

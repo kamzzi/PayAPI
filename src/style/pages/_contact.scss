@@ -1,0 +1,11 @@
+@use "./../abstracts/variables" as *;
+@use "./../abstracts/mixins" as *;
+
+.section-contact {
+  padding-top: var(--p-96);
+
+  @include media(52.5rem) {
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
