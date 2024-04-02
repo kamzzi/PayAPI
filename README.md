@@ -61,6 +61,6 @@ To start using the project, follow these steps:
 
 ## Contact
 
-PayAPI: [https://github.com/kamzzi/DSA-Typescript](https://github.com/kamzzi/PayAPI)
+PayAPI: [https://github.com/kamzzi/PayAPI](https://github.com/kamzzi/PayAPI)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
