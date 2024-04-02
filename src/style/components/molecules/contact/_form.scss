@@ -1,4 +1,5 @@
 @use "./../../../abstracts/variables" as *;
+@use "./../../../abstracts/mixins" as *;
 
 .form {
   display: flex;
@@ -16,6 +17,12 @@
     }
   }
 
+  &__item--success {
+    .form__input {
+      border-color: #2a9d8f;
+    }
+  }
+
   &__action {
     position: relative;
   }
@@ -29,12 +36,16 @@
     width: 100%;
 
     padding: 1.25rem;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     background-color: transparent;
-    border-bottom: 1px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
     color: var(--color-secondary);
     font-family: inherit;
     font-size: var(--default-fs);
+
+    @include media(27rem) {
+      padding: 0.95rem 0.95rem 0.95rem 1.25rem;
+    }
 
     &:focus {
       outline: none;
@@ -69,5 +80,9 @@
     max-height: 0;
     text-align: left;
     transition: 0.3s;
+
+    @include media(27rem) {
+      font-size: var(--smallest-fs);
+    }
   }
 }

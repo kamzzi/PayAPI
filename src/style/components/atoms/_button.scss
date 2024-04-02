@@ -67,5 +67,14 @@
       color: var(--color-neutral);
       background-color: var(--color-secondary);
     }
+
+    &.success {
+      background-color: #2a9d8f;
+      color: var(--color-neutral);
+      border-color: #2a9d8f;
+      &:hover {
+        background-color: #268d81;
+      }
+    }
   }
 }
