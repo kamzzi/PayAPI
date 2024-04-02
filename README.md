@@ -4,8 +4,6 @@
   <p align="center">
     Build your dream API with us, we will help you at every step
     <br />
-    <br />
-    ![PayAPI](./public/logo.svg)
   </p>
 </div>
 
